@@ -3,6 +3,7 @@ package com.example.w21comp3025w4
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.w21comp3025w4.databinding.ActivityPassDetailsBinding
 
 class PassDetailsActivity : AppCompatActivity() {
@@ -14,7 +15,13 @@ class PassDetailsActivity : AppCompatActivity() {
         binding = ActivityPassDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.button.setOnClickListener {
+        var person = intent.getStringExtra("personName")
+
+        //log the person's name
+        Log.i("INTENT_EXPERIMENT", "person's name is $person")
+        binding.passedDetailtextView.text = "Welcome $person"
+
+        binding.backToMainButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java )
             startActivity(intent)
         }

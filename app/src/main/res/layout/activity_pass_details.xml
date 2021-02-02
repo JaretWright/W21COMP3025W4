@@ -10,15 +10,16 @@
         android:id="@+id/passedDetailtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="TextView"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/accent"
         android:textSize="@dimen/font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"/>
+        tools:text="TextView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/backToMainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back_to_main"

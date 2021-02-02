@@ -3,6 +3,7 @@ package com.example.w21comp3025w4
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.w21comp3025w4.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,8 +18,16 @@ class MainActivity : AppCompatActivity() {
         //setup and intent to navigate to the PassDetail class and push whatever
         //content is in the editText to the PassDetail activity
         binding.detailsButton.setOnClickListener {
-            val intent = Intent(applicationContext, PassDetailsActivity::class.java)
-            startActivity(intent)
+
+            if (binding.editTextTextPersonName.text.toString().isNotEmpty())
+            {
+                val intent = Intent(applicationContext, PassDetailsActivity::class.java)
+                intent.putExtra("personName", binding.editTextTextPersonName.text.toString())
+                startActivity(intent)
+            }
+            else
+                Toast.makeText(this, "You need to enter your name", Toast.LENGTH_LONG).show()
+
         }
     }
 }
