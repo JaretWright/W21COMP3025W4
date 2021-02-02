@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Learning Intents</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="details"><![CDATA[Details >>]]></string>
+    <string name="web_browser">WEB BROWSER</string>
+    <string name="sms">SMS</string>
+    <string name="copy_to_clipboard">COPY TO CLIPBOARD</string>
+</resources>
