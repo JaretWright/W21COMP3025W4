@@ -6,4 +6,6 @@
     <string name="sms">SMS</string>
     <string name="copy_to_clipboard">COPY TO CLIPBOARD</string>
     <string name="back_to_main">BACK TO MAIN</string>
+    <string name="load_url">LOAD URL</string>
+    <string name="enter_url">Enter URL</string>
 </resources>

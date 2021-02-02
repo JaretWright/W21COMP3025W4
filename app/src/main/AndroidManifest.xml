@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.W21COMP3025W4">
-        <activity android:name=".PassDetailsActivity"></activity>
+        <activity android:name=".WebActivity"></activity>
+        <activity android:name=".PassDetailsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

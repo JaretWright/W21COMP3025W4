@@ -27,7 +27,12 @@ class MainActivity : AppCompatActivity() {
             }
             else
                 Toast.makeText(this, "You need to enter your name", Toast.LENGTH_LONG).show()
+        }
 
+        //set up an intent ot navigate to the WebActivity
+        binding.webButton.setOnClickListener {
+            val intent = Intent(this, WebActivity::class.java)
+            startActivity(intent)
         }
     }
 }
