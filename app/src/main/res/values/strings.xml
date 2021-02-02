@@ -5,4 +5,5 @@
     <string name="web_browser">WEB BROWSER</string>
     <string name="sms">SMS</string>
     <string name="copy_to_clipboard">COPY TO CLIPBOARD</string>
+    <string name="back_to_main">BACK TO MAIN</string>
 </resources>
