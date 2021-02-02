@@ -34,5 +34,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, WebActivity::class.java)
             startActivity(intent)
         }
+
+        //setup an activity to navigate to the sms activity
+        binding.smsButton.setOnClickListener {
+            val intent = Intent(this, SmsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
