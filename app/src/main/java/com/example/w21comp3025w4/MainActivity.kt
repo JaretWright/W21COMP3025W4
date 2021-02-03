@@ -35,9 +35,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //setup an activity to navigate to the sms activity
+        //set up an intent ot navigate to the SmsActivity
         binding.smsButton.setOnClickListener {
             val intent = Intent(this, SmsActivity::class.java)
+            startActivity(intent)
+        }
+
+        //set up an intent to navigate to the copyToClipboard activity
+        binding.copyButton.setOnClickListener {
+            val intent = Intent(this, CopyToClipActivity::class.java)
             startActivity(intent)
         }
     }

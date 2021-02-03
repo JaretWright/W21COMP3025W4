@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.w21comp3025w4.databinding.ActivitySmsBinding
 
 class SmsActivity : AppCompatActivity() {
@@ -15,22 +16,25 @@ class SmsActivity : AppCompatActivity() {
         binding = ActivitySmsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //intent for the back button
-        binding.backToMainButton.setOnClickListener {
+        //set an onclick listener to navigate back to the main activity
+        binding.backToMain2Button.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        //an intent for the sms
-        binding.smsButton.setOnClickListener{
-            if (binding.editTextPhone.text.isNotEmpty() && binding.messageEditText.text.toString().isNotEmpty()){
-                val phone = binding.editTextPhone.text.toString()
-                val message = binding.messageEditText.text.toString()
-                val uri = Uri.parse("smsto:$phone")
+        //setup an inplicit intent to send information to the messages app
+        binding.smsButton2.setOnClickListener {
+            var phoneNum = binding.editTextPhone.text.toString()
+            var message = binding.messageEditText.text.toString()
+
+            if (phoneNum.isNotEmpty() && message.isNotEmpty())
+            {
+                val uri = Uri.parse("smsto:$phoneNum")
                 val intent = Intent(Intent.ACTION_SENDTO, uri)
-                intent.putExtra("sms_body", message)
                 startActivity(intent)
             }
+            else
+                Toast.makeText(this, "Phone number and message must have values", Toast.LENGTH_LONG).show()
         }
     }
 }
